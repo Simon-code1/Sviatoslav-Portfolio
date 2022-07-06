@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure--ys2l0avt3nieelgcuprf6xl79u#2w9iog4_(9_!fi54t$6(l#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'sviatoslav.popina@gmail.com'
@@ -32,7 +32,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-ALLOWED_HOSTS = ['https://sviatoslav-portfolio.herokuapp.com/']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
