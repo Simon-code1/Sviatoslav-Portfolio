@@ -1,0 +1,49 @@
+{% load static %}
+
+<div class="project-content" id="projects">
+
+    <h2 class="label">Projects</h2>
+{% for project in projects %}
+    <div class="project-block">
+
+            <div class="project-img">
+                <img src="{{ project.image.url }}" alt="image" height="250px" width="250px">
+            </div>
+            <div class="project-description">
+                <h3 class="project-main-text">{{project.name}}</h3>
+                <p> {{project.description}}</p>
+
+                <div class="project-icon">
+                    <div class="project-links">
+                        <div class="link">
+                            <a class="project-link-text" href="{{ project.github }}">GitHub</a>
+                       </div>
+
+                        <div class="link">
+                            <a class="project-link-text" href="{{ project.online }}">Web</a>
+                        </div>
+
+                    </div>
+
+                    <div class="project-technology-block">
+
+                        {% for technology in project.technology.split %}
+
+
+                            <div class="project-technology">
+                                <p class="project-technology-text">{{technology}}</p>
+                            </div>
+
+                        {% endfor %}
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+    </div>
+ {% endfor %}
+
+</div>
