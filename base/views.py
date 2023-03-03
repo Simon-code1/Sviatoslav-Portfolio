@@ -5,6 +5,8 @@ from .models import Project
 from django.core.mail import send_mail
 from django.contrib import messages
 
+
+@csrf_protect
 def home(request):
     projects = Project.objects.all()
     context = {'projects': projects}
