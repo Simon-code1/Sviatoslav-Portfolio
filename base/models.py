@@ -9,7 +9,7 @@ class Project(models.Model):
     online = models.URLField(max_length=200, null=True)
     github = models.URLField(max_length=200, null=True)
     technology = models.CharField(max_length=200, null=True)
-    image = models.ImageField(null=True)
+    image = models.ImageField(null=True, upload_to='images/')
 
     def __str__(self):
         return self.name
