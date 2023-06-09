@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'base.apps.BaseConfig',
     'storages'
@@ -172,4 +171,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 #CSRF 
-CSRF_TRUSTED_ORIGINS = ['https://sviatoslav-portfolio.up.railway.app', 'http://sviatoslav-portfolio.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://sviatoslav-portfolio.up.railway.app', 'http://sviatoslav-portfolio.up.railway.app', 'http://0.0.0.0', 'http://localhost',]
