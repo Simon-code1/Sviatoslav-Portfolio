@@ -32,7 +32,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'sviatoslav-portfolio.up.railway.app']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'sviatoslav-portfolio.up.railway.app','sviatoslav-portfolio.com']
 
 
 # Application definition
@@ -171,4 +171,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 #CSRF 
-CSRF_TRUSTED_ORIGINS = ['https://sviatoslav-portfolio.up.railway.app', 'http://sviatoslav-portfolio.up.railway.app', 'http://0.0.0.0', 'http://localhost',]
+CSRF_TRUSTED_ORIGINS = ['https://sviatoslav-portfolio.up.railway.app', 'http://sviatoslav-portfolio.up.railway.app', 'https://sviatoslav-portfolio.com','http://sviatoslav-portfolio.com', 'http://0.0.0.0', 'http://localhost',]
