@@ -1,6 +1,6 @@
 # My Personal Portfolio Website
 
-[![Website Status](https://img.shields.io/website?url=https://sviatosalv-portfolio.com)](https://sviatoslav-portfolio.com)
+[![Website Status](https://img.shields.io/website?url=https://sviatoslav-portfolio.com)](https://sviatoslav-portfolio.com)
 
 
 ## About
