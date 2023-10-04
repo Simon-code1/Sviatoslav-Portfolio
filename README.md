@@ -1,7 +1,7 @@
 # My Personal Portfolio Website
 
 [![Website Status](https://img.shields.io/website?url=https://sviatosalv-portfolio.com)](https://sviatoslav-portfolio.com)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Simon-code1/Sviatoslav-Portfolio/blob/main/LICENSE)
+
 
 ## About
 
