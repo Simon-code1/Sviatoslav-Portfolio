@@ -4,7 +4,6 @@
 
 
     <ul class="items">
-        <li><a class="item" href="/">Home</a></li>
         <li><a class="item" href="#about">About</a></li>
         <li><a class="item" href="#skills">Skills</a></li>
         <li><a class="item" href="#projects">Projects</a></li>
@@ -17,18 +16,3 @@
     </div>
 </nav>
 
-<script>
-    const hamburger = document.querySelector(".hamburger");
-    const items = document.querySelector(".items")
-
-    hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        items.classList.toggle("active")
-    })
-
-    document.querySelectorAll(".items").forEach( n => n.addEventListener("click", () => {
-        hamburger.classList.remove("active");
-        items.classList.remove("active") ;      
-        }))
-
-</script>
