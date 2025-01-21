@@ -1,0 +1,30 @@
+{% load static %}
+<!-- Certifications Section -->
+<section id="certifications" class="certifications-block text-center">
+    <div class="container">
+        <h2 class="label-color">Certifications</h2>
+        <div class="row">
+            {% for certification in certifications %}
+            <div class="col-md-4 mb-4">
+                <div class="card certification-card">
+                    {% if certification.image %}
+                    <div class="cert-image-container">
+                        <img src="{{ certification.image.url }}" class="card-img-top cert-image" alt="{{ certification.name }}">
+                    </div>
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title cert-title">{{ certification.name }}</h5>
+                        <p class="card-text cert-organization"><strong>Issued by:</strong> {{ certification.issuing_organization }}</p>
+                        <p class="card-text cert-date"><strong>Date Received:</strong> {{ certification.date_received }}</p>
+                        <p class="card-text cert-description">{{ certification.description }}</p>
+                        {% if certification.online %}
+                        <a href="{{ certification.online }}" class="btn btn-primary" target="_blank">View</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+

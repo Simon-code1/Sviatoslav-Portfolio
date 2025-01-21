@@ -1,36 +1,37 @@
 {% load static %}
-
-<div class="contact-content">
-    <h2 class="contact-label">Contact Me</h2>
-
-    <div class="contact-block" id="contact">
-
-        <br class="contact-line">
-        <p id="contact-info">Have questions or comments?</p>
-
-        <div class="contact-form">
-            {% if messages %}
-                <ul class="messages">
-                    {% for message in messages %}
-                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-            <form action="" method="POST" class="form-contact">
-                {% csrf_token %}
-
-                <div class="contact-input">
-                    <input type="text" id="username" name="username" placeholder="Name" >
+<!-- Contact Section -->
+<section id="contact" class="contact-content text-center">
+    <h2 class="label">Contact Me</h2>
+    <br>
+    <div class="contact-background">
+        <br>
+        <h4><span class="name-color" style="font-weight: bold;">Send a Message</span></h4>
+        <p class="contact-info">Fill out the form below and I'll get back to you as soon as possible.</p>
+        <br>
+        <div class="container">
+            <div class="contact-form">
+                {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                <form action="" method="POST" class="form-contact">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" name="email_address" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="message" name="message" placeholder="Your message..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send</button>
                     <br>
-                    <input type="email" id="email" name="email_address" placeholder="Email">
-                    <br>
-                    <input type="text" id="message" name="message" placeholder="Message">
-                    <br>
-                </div>
-
-                <input type="submit" value="Send" class="btn">
-            </form>
+                </form>
+            </div>
         </div>
     </div>
-
-</div>
+</section>

@@ -1,28 +1,18 @@
 {% load static %}
-
-<div class="skills-content" id="skills">
-    <h2 class="label">Skills</h2>
-    <div class="skills-box">
-        <div class="technical-skills">
-            <ul>
-                <h3 class="label-text">Technical skills</h3>
-                <li class="skills-text">HTML, CSS, SASS</li>
-                <li class="skills-text">JavaScript, TypeScript</li>
-                <li class="skills-text">React, Vue</li>
-                <li class="skills-text">Python, Django</li>
-                <li class="skills-text">Node, Express.js</li>
-            </ul>
-        </div>
-        <div class="tools">
-            <ul>
-                <h3 class="label-text">Tools</h3>
-                <li class="skills-text">Git/GitHub</li>
-                <li class="skills-text">Bash</li>
-                <li class="skills-text">Visual Studio Code</li>
-                <li class="skills-text">Postman</li>
-                <li class="skills-text">Linux</li>
-            </ul>
+<!-- Skills Section -->
+<section id="skills" class="skills-block">
+    <div class="container">
+        <h2 class="label-color">Technical Skills</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="about-text">
+                    <ul class="skills-list">
+                        {% for skill in skills %}
+                            <li>{{ skill.name }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-
+</section>

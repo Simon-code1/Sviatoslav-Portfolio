@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
+    'ckeditor_uploader',
     'base.apps.BaseConfig',
     'storages'
 ]
@@ -102,7 +104,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': env('DB_NAME'),
         'USER': env('DB_USER'),
-        'PASSWORD': env('DB_PASSWORD'),
+        'PASSWORD': env('DB_PASSWORD'),  
         'HOST': env('DB_HOST'),
         'PORT': env('DB_PORT'),
     }
@@ -148,6 +150,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
+CKEDITOR_UPLOAD_PATH = "uploads/"
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
